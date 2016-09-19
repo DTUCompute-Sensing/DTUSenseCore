@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0DFD111D8FCDC8001D2FAE /* DTUSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */; };
 		2A817ECD1D8BD8690040B21D /* DTUSenseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A817EC31D8BD8690040B21D /* DTUSenseCore.framework */; };
 		2A817ED21D8BD8690040B21D /* DTUSenseCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817ED11D8BD8690040B21D /* DTUSenseCoreTests.swift */; };
 		2A817ED41D8BD8690040B21D /* DTUSenseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A817EC61D8BD8690040B21D /* DTUSenseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A817F311D8BE04B0040B21D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A817F301D8BE04B0040B21D /* HealthKit.framework */; };
+		2A817F3C1D8BE7630040B21D /* DTUSenceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F3B1D8BE7630040B21D /* DTUSenceKit.swift */; };
+		2A817F411D8BEF380040B21D /* DTUSensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F401D8BEF380040B21D /* DTUSensorManager.swift */; };
+		2A817F431D8BF4430040B21D /* DTUBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F421D8BF4430040B21D /* DTUBattery.swift */; };
+		2A817F471D8C02770040B21D /* DTUAccelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F461D8C02770040B21D /* DTUAccelerometer.swift */; };
+		2A817F491D8C03E40040B21D /* DTUMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F481D8C03E40040B21D /* DTUMotionManager.swift */; };
+		2A817F4B1D8C04580040B21D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A817F4A1D8C04580040B21D /* CoreMotion.framework */; };
+		2A817F4D1D8C22120040B21D /* DTUAccelerometerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */; };
+		2A817F4F1D8C23770040B21D /* DTUSensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F4E1D8C23770040B21D /* DTUSensorData.swift */; };
+		2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +34,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensor.swift; sourceTree = "<group>"; };
 		2A817EC31D8BD8690040B21D /* DTUSenseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTUSenseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A817EC61D8BD8690040B21D /* DTUSenseCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTUSenseCore.h; sourceTree = "<group>"; };
 		2A817EC71D8BD8690040B21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A817ECC1D8BD8690040B21D /* DTUSenseCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTUSenseCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A817ED11D8BD8690040B21D /* DTUSenseCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTUSenseCoreTests.swift; sourceTree = "<group>"; };
 		2A817ED31D8BD8690040B21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A817F301D8BE04B0040B21D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2A817F3B1D8BE7630040B21D /* DTUSenceKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSenceKit.swift; sourceTree = "<group>"; };
+		2A817F401D8BEF380040B21D /* DTUSensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorManager.swift; sourceTree = "<group>"; };
+		2A817F421D8BF4430040B21D /* DTUBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUBattery.swift; sourceTree = "<group>"; };
+		2A817F461D8C02770040B21D /* DTUAccelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUAccelerometer.swift; path = Sensors/DTUAccelerometer.swift; sourceTree = "<group>"; };
+		2A817F481D8C03E40040B21D /* DTUMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUMotionManager.swift; path = Managers/DTUMotionManager.swift; sourceTree = "<group>"; };
+		2A817F4A1D8C04580040B21D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUAccelerometerData.swift; path = Sensors/DTUAccelerometerData.swift; sourceTree = "<group>"; };
+		2A817F4E1D8C23770040B21D /* DTUSensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorData.swift; sourceTree = "<group>"; };
+		2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A817F4B1D8C04580040B21D /* CoreMotion.framework in Frameworks */,
+				2A817F311D8BE04B0040B21D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +80,7 @@
 				2A817EC51D8BD8690040B21D /* DTUSenseCore */,
 				2A817ED01D8BD8690040B21D /* DTUSenseCoreTests */,
 				2A817EC41D8BD8690040B21D /* Products */,
+				2A817F2F1D8BE04B0040B21D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,10 @@
 		2A817EC51D8BD8690040B21D /* DTUSenseCore */ = {
 			isa = PBXGroup;
 			children = (
+				2A817F501D8C23810040B21D /* Template */,
+				2A817F3B1D8BE7630040B21D /* DTUSenceKit.swift */,
+				2A817F451D8C01C30040B21D /* Managers */,
+				2A817F441D8C01B70040B21D /* Sensors */,
 				2A817EC61D8BD8690040B21D /* DTUSenseCore.h */,
 				2A817EC71D8BD8690040B21D /* Info.plist */,
 			);
@@ -84,6 +113,44 @@
 				2A817ED31D8BD8690040B21D /* Info.plist */,
 			);
 			path = DTUSenseCoreTests;
+			sourceTree = "<group>";
+		};
+		2A817F2F1D8BE04B0040B21D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A817F4A1D8C04580040B21D /* CoreMotion.framework */,
+				2A817F301D8BE04B0040B21D /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A817F441D8C01B70040B21D /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				2A817F421D8BF4430040B21D /* DTUBattery.swift */,
+				2A817F461D8C02770040B21D /* DTUAccelerometer.swift */,
+				2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */,
+			);
+			name = Sensors;
+			sourceTree = "<group>";
+		};
+		2A817F451D8C01C30040B21D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2A817F401D8BEF380040B21D /* DTUSensorManager.swift */,
+				2A817F481D8C03E40040B21D /* DTUMotionManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2A817F501D8C23810040B21D /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */,
+				2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */,
+				2A817F4E1D8C23770040B21D /* DTUSensorData.swift */,
+			);
+			name = Template;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +215,7 @@
 				TargetAttributes = {
 					2A817EC21D8BD8690040B21D = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					2A817ECB1D8BD8690040B21D = {
@@ -196,6 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A817F491D8C03E40040B21D /* DTUMotionManager.swift in Sources */,
+				2A0DFD111D8FCDC8001D2FAE /* DTUSensor.swift in Sources */,
+				2A817F4D1D8C22120040B21D /* DTUAccelerometerData.swift in Sources */,
+				2A817F3C1D8BE7630040B21D /* DTUSenceKit.swift in Sources */,
+				2A817F4F1D8C23770040B21D /* DTUSensorData.swift in Sources */,
+				2A817F471D8C02770040B21D /* DTUAccelerometer.swift in Sources */,
+				2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */,
+				2A817F431D8BF4430040B21D /* DTUBattery.swift in Sources */,
+				2A817F411D8BEF380040B21D /* DTUSensorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +397,7 @@
 		2A817ED81D8BD8690040B21D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -333,6 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dtu.dk.DTUSenseCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +419,7 @@
 		2A817ED91D8BD8690040B21D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -359,6 +439,7 @@
 		2A817EDB1D8BD8690040B21D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DTUSenseCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtu.dk.DTUSenseCoreTests;
@@ -370,6 +451,7 @@
 		2A817EDC1D8BD8690040B21D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DTUSenseCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtu.dk.DTUSenseCoreTests;
@@ -397,6 +479,7 @@
 				2A817ED91D8BD8690040B21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A817EDA1D8BD8690040B21D /* Build configuration list for PBXNativeTarget "DTUSenseCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +488,7 @@
 				2A817EDC1D8BD8690040B21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

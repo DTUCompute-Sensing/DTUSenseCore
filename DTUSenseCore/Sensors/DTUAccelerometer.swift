@@ -14,6 +14,7 @@ public class DTUAccelerometer : DTUSensor {
     var sharedMotionManager = DTUMotionManager.sharedMotionManager
     
     //MARK: - Initilization and Configuration
+    
     func initWithConfiguration (with config: DTUAccelerometerConfiguration?) -> DTUAccelerometer{
         self.sensorType = SensorType.Accelerometer
         sharedMotionManager = DTUMotionManager.sharedMotionManager
@@ -21,13 +22,11 @@ public class DTUAccelerometer : DTUSensor {
         return self
     }
     
-    
     //MARK: - Availablity
+    
     func isSensorAvailable() -> Bool {
         return DTUMotionManager.sharedMotionManager.isAccelerometerAvailable
     }
-    
-    
     
     //MARK: - Configuration
     
@@ -41,13 +40,12 @@ public class DTUAccelerometer : DTUSensor {
             let accelerometerConfiguration = config as! DTUAccelerometerConfiguration
             self.sharedMotionManager.accelerometerUpdateInterval = accelerometerConfiguration.sampleRate  // Convert Hz into interval
         }
-        
     }
     
     //MARK: - Data Capturing
+    
     override func startSensing() {
         super.startSensing()
-        
         if sharedMotionManager.isAccelerometerAvailable {
             sharedMotionManager.startAccelerometerUpdates(to: (OperationQueue.current!), withHandler: { (data : CMAccelerometerData?, error : Error?) in
                 if (error != nil) {
@@ -63,10 +61,8 @@ public class DTUAccelerometer : DTUSensor {
     }
     
     override func stopSensing() {
-        
         sharedMotionManager.stopAccelerometerUpdates()
         super.stopSensing()
-
     }
     
 }

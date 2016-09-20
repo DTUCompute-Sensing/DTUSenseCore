@@ -23,6 +23,9 @@
 		2A855AE41D912F2500A522B6 /* DTUSensorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE31D912F2500A522B6 /* DTUSensorConfiguration.swift */; };
 		2A855AE61D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE51D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift */; };
 		2A855AE91D91366600A522B6 /* DTUAccelerometerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */; };
+		2A855AED1D914FB800A522B6 /* DTUGyroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AEC1D914FB800A522B6 /* DTUGyroscope.swift */; };
+		2A855AF11D91533800A522B6 /* DTUGyroscopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AF01D91533800A522B6 /* DTUGyroscopeData.swift */; };
+		2A855AF31D91579100A522B6 /* DTUGyroscopeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AF21D91579100A522B6 /* DTUGyroscopeConfiguration.swift */; };
 		2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		2A855AE31D912F2500A522B6 /* DTUSensorConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUSensorConfiguration.swift; path = Configurations/DTUSensorConfiguration.swift; sourceTree = "<group>"; };
 		2A855AE51D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUSensorSampleRateConfiguration.swift; path = Configurations/DTUSensorSampleRateConfiguration.swift; sourceTree = "<group>"; };
 		2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUAccelerometerConfiguration.swift; path = Configurations/DTUAccelerometerConfiguration.swift; sourceTree = "<group>"; };
+		2A855AEC1D914FB800A522B6 /* DTUGyroscope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUGyroscope.swift; path = Sensors/DTUGyroscope.swift; sourceTree = "<group>"; };
+		2A855AF01D91533800A522B6 /* DTUGyroscopeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUGyroscopeData.swift; path = Sensors/DTUGyroscopeData.swift; sourceTree = "<group>"; };
+		2A855AF21D91579100A522B6 /* DTUGyroscopeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUGyroscopeConfiguration.swift; path = Configurations/DTUGyroscopeConfiguration.swift; sourceTree = "<group>"; };
 		2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +139,9 @@
 		2A817F441D8C01B70040B21D /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				2A855AEF1D91530300A522B6 /* Battery */,
+				2A855AEE1D9152F900A522B6 /* Gyroscope */,
 				2A855AE71D91360F00A522B6 /* Accelerometer */,
-				2A817F421D8BF4430040B21D /* DTUBattery.swift */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -168,6 +175,24 @@
 				2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */,
 			);
 			name = Accelerometer;
+			sourceTree = "<group>";
+		};
+		2A855AEE1D9152F900A522B6 /* Gyroscope */ = {
+			isa = PBXGroup;
+			children = (
+				2A855AEC1D914FB800A522B6 /* DTUGyroscope.swift */,
+				2A855AF01D91533800A522B6 /* DTUGyroscopeData.swift */,
+				2A855AF21D91579100A522B6 /* DTUGyroscopeConfiguration.swift */,
+			);
+			name = Gyroscope;
+			sourceTree = "<group>";
+		};
+		2A855AEF1D91530300A522B6 /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				2A817F421D8BF4430040B21D /* DTUBattery.swift */,
+			);
+			name = Battery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +315,12 @@
 				2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */,
 				2A817F431D8BF4430040B21D /* DTUBattery.swift in Sources */,
 				2A855AE41D912F2500A522B6 /* DTUSensorConfiguration.swift in Sources */,
+				2A855AF31D91579100A522B6 /* DTUGyroscopeConfiguration.swift in Sources */,
+				2A855AF11D91533800A522B6 /* DTUGyroscopeData.swift in Sources */,
 				2A817F411D8BEF380040B21D /* DTUSensorManager.swift in Sources */,
 				2A855AE91D91366600A522B6 /* DTUAccelerometerConfiguration.swift in Sources */,
 				2A855AE61D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift in Sources */,
+				2A855AED1D914FB800A522B6 /* DTUGyroscope.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

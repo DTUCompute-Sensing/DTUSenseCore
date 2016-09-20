@@ -25,6 +25,7 @@ public class DTUSensorManager {
             return DTUBattery().isSensorAvailable()
         default:
             print("Unknow Sensor. Sensor Type = \(sensor) ")
+            return false
         }
     }
     
@@ -43,10 +44,13 @@ public class DTUSensorManager {
         switch type {
         case .Accelerometer:
             return DTUAccelerometer().initWithConfiguration(with: config as? DTUAccelerometerConfiguration)
+        case .Gyroscope:
+            return DTUGyroscope().initWithConfiguration(with: config as? DTUGyroscopeConfiguration)
         case .Battery:
             return DTUBattery().initwithConfiguration()
         default:
             print("Unknown Sensor Type : \(type.rawValue)")
+
         }
     }
     

@@ -28,8 +28,12 @@ public class DTUSenceKit {
     }
     
     
-    public func registerSensor(sensor : SensorType) {
-        sensorManager.registerSensor(sensor: sensor)
+    public func registerSensor(sensor : SensorType, withConfig config:DTUSensorConfiguration?) {
+        sensorManager.registerSensor(sensor: sensor, withConfig: config)
+    }
+    
+    public func setConfiguration(set config : DTUSensorConfiguration , to sensor : SensorType)  {
+        sensorManager.setConfiguration(set: config, to: sensor)
     }
     
     
@@ -42,5 +46,8 @@ public class DTUSenceKit {
         self.sensorManager.startContinuousSensingWithSensor(sensorType: sensorType)
     }
     
+    public func stopContinuousSensingWithSensor(sensor : SensorType) {
+        self.sensorManager.stopContinuousSensingWithSensor(sensor: sensor)
+    }
 }
 

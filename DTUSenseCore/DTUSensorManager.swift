@@ -31,19 +31,23 @@ public class DTUSensorManager {
     
     //MARK: - Sensor Registration
     
-    func registerSensor(sensor : SensorType)  {
+    func registerSensor(sensor : SensorType, withConfig config:DTUSensorConfiguration?)  {
         print("Register Sensor : \(sensor)" )
-        sensors[sensor.rawValue] = createAcelerometerSensor()
+        sensors[sensor.rawValue] = creatSensor(sensor: sensor, with: config)
     }
     
     
     //MARK: Sensor Creation
     
-    //TDOD : Create a common sensor class and the use one method for sensor creation
-    
-    
-    func createAcelerometerSensor() -> DTUAccelerometer {
-        return DTUAccelerometer().initWithConfiguration()
+    func creatSensor(sensor type : SensorType, with config: DTUSensorConfiguration?) -> DTUSensor {
+        switch type {
+        case .Accelerometer:
+            return DTUAccelerometer().initWithConfiguration(with: config as? DTUAccelerometerConfiguration)
+        case .Battery:
+            return DTUBattery().initwithConfiguration()
+        default:
+            print("Unknown Sensor Type : \(type.rawValue)")
+        }
     }
     
     
@@ -63,6 +67,15 @@ public class DTUSensorManager {
     }
     
     
+    //MARK: Sensor Configuration
+    
+    public func setConfiguration(set config : DTUSensorConfiguration , to sensor : SensorType)  {
+        //TODO : If configuration was not provided, get the Default
+        getSensor(sensorType: sensor).sensorConfiguration = config
+    }
+
+    
+    
     //MARK: Continious Sensing
     
     func startContinuousSensingWithSensor(sensorType : SensorType) {
@@ -73,6 +86,19 @@ public class DTUSensorManager {
         }
         
         getSensor(sensorType: sensorType).startSensing()
+    }
+    
+    
+    func stopContinuousSensingWithSensor(sensor : SensorType) {
+        print("Stop sensing with -: \(sensor.rawValue)")
+        
+        if isSensorSensing(sensorType: sensor) == false {
+            print("Sensor is already NOT sensing data. \(sensor.rawValue)")
+            abort()
+        }
+        
+        getSensor(sensorType: sensor).stopSensing()
+
     }
     
 }

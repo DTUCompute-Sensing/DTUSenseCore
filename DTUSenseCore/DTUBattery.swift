@@ -9,10 +9,11 @@
 import Foundation
 
 
-class DTUBattery : DTUSensor {
+public class DTUBattery : DTUSensor {
     
-    func initwithConfiguration () {
+    public func initwithConfiguration () -> DTUBattery {
     
+        return self
     }
     
     

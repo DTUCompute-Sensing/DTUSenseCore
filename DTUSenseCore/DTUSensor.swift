@@ -12,6 +12,7 @@ public class DTUSensor: NSObject {
     
     
     var sensorType : SensorType!
+    var sensorConfiguration : DTUSensorConfiguration? = DTUSensorConfiguration()
     var sensorDataListeners : [String : DTUSensorDataHandler.CompletionBlock] = [:]
     var sensing : Bool = false
     

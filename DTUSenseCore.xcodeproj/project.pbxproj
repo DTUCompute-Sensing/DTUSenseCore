@@ -20,6 +20,9 @@
 		2A817F4B1D8C04580040B21D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A817F4A1D8C04580040B21D /* CoreMotion.framework */; };
 		2A817F4D1D8C22120040B21D /* DTUAccelerometerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */; };
 		2A817F4F1D8C23770040B21D /* DTUSensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817F4E1D8C23770040B21D /* DTUSensorData.swift */; };
+		2A855AE41D912F2500A522B6 /* DTUSensorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE31D912F2500A522B6 /* DTUSensorConfiguration.swift */; };
+		2A855AE61D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE51D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift */; };
+		2A855AE91D91366600A522B6 /* DTUAccelerometerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */; };
 		2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		2A817F4A1D8C04580040B21D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUAccelerometerData.swift; path = Sensors/DTUAccelerometerData.swift; sourceTree = "<group>"; };
 		2A817F4E1D8C23770040B21D /* DTUSensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorData.swift; sourceTree = "<group>"; };
+		2A855AE31D912F2500A522B6 /* DTUSensorConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUSensorConfiguration.swift; path = Configurations/DTUSensorConfiguration.swift; sourceTree = "<group>"; };
+		2A855AE51D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUSensorSampleRateConfiguration.swift; path = Configurations/DTUSensorSampleRateConfiguration.swift; sourceTree = "<group>"; };
+		2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUAccelerometerConfiguration.swift; path = Configurations/DTUAccelerometerConfiguration.swift; sourceTree = "<group>"; };
 		2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensorDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,9 +133,8 @@
 		2A817F441D8C01B70040B21D /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				2A855AE71D91360F00A522B6 /* Accelerometer */,
 				2A817F421D8BF4430040B21D /* DTUBattery.swift */,
-				2A817F461D8C02770040B21D /* DTUAccelerometer.swift */,
-				2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -149,8 +154,20 @@
 				2AB990E11D8FE5EC0000F991 /* DTUSensorDataHandler.swift */,
 				2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */,
 				2A817F4E1D8C23770040B21D /* DTUSensorData.swift */,
+				2A855AE31D912F2500A522B6 /* DTUSensorConfiguration.swift */,
+				2A855AE51D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift */,
 			);
 			name = Template;
+			sourceTree = "<group>";
+		};
+		2A855AE71D91360F00A522B6 /* Accelerometer */ = {
+			isa = PBXGroup;
+			children = (
+				2A817F461D8C02770040B21D /* DTUAccelerometer.swift */,
+				2A817F4C1D8C22120040B21D /* DTUAccelerometerData.swift */,
+				2A855AE81D91366600A522B6 /* DTUAccelerometerConfiguration.swift */,
+			);
+			name = Accelerometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +289,10 @@
 				2A817F471D8C02770040B21D /* DTUAccelerometer.swift in Sources */,
 				2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */,
 				2A817F431D8BF4430040B21D /* DTUBattery.swift in Sources */,
+				2A855AE41D912F2500A522B6 /* DTUSensorConfiguration.swift in Sources */,
 				2A817F411D8BEF380040B21D /* DTUSensorManager.swift in Sources */,
+				2A855AE91D91366600A522B6 /* DTUAccelerometerConfiguration.swift in Sources */,
+				2A855AE61D9135E000A522B6 /* DTUSensorSampleRateConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

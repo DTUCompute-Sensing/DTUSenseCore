@@ -23,6 +23,8 @@ public class DTUSensorManager {
             return DTUAccelerometer().isSensorAvailable()
         case .Battery:
             return DTUBattery().isSensorAvailable()
+        case .Gyroscope:
+            return DTUGyroscope().isSensorAvailable()
         default:
             print("Unknow Sensor. Sensor Type = \(sensor) ")
             return false

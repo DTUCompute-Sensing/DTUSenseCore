@@ -30,6 +30,7 @@ public class DTUSensorManager {
             return false
         }
     }
+    
     //MARK: - Sensor Registration
     
     func registerSensor(sensor : SensorType, withConfig config:DTUSensorConfiguration?)  {

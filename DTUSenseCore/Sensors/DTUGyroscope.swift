@@ -39,8 +39,6 @@ public class DTUGyroscope: DTUSensor {
             super.sensorConfiguration = config
             let gyroscopeConfiguration = config as! DTUGyroscopeConfiguration
             self.sharedMotionManager.gyroUpdateInterval = gyroscopeConfiguration.sampleRate
-            
-            //TODO Convert Hz into interval
         }
     }
     
@@ -49,11 +47,12 @@ public class DTUGyroscope: DTUSensor {
     override func startSensing() {
         super.startSensing()
         if sharedMotionManager.isGyroAvailable {
-            sharedMotionManager.startGyroUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
+            sharedMotionManager.startGyroUpdates(to: OperationQueue.current!, withHandler: { (gyroData, error) in
                 if (error != nil) {
                     print("startGyroUpdates error: \(error?.localizedDescription)")
                 }else{
-                    let data : DTUGyroscopeData = DTUGyroscopeData().initWithGyrosopeData(gyroscopeData: data!)
+                    let data : DTUGyroscopeData = DTUGyroscopeData().initWithGyrosopeData(gyroscopeData: gyroData!)
+                    data.timeStamp = Date(timeIntervalSinceNow: gyroData!.timestamp) as NSDate!
                     self.submitSensorData(data: data)
                 }
             })

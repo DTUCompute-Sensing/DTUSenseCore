@@ -11,8 +11,6 @@ import Foundation
 
 public class DTUSensorManager {
     
-    
-    
     var sensors :  [String: DTUSensor] = [:]
     
     //MARK: - Sensor Availability
@@ -23,6 +21,13 @@ public class DTUSensorManager {
             return DTUAccelerometer().isSensorAvailable()
         case .Battery:
             return DTUBattery().isSensorAvailable()
+<<<<<<< Updated upstream
+=======
+        case .Gyroscope:
+            return DTUGyroscope().isSensorAvailable()
+        case .Magnetometer:
+            return DTUMagnetometer().isSensorAvailable()
+>>>>>>> Stashed changes
         default:
             print("Unknow Sensor. Sensor Type = \(sensor) ")
         }
@@ -43,6 +48,13 @@ public class DTUSensorManager {
         switch type {
         case .Accelerometer:
             return DTUAccelerometer().initWithConfiguration(with: config as? DTUAccelerometerConfiguration)
+<<<<<<< Updated upstream
+=======
+        case .Gyroscope:
+            return DTUGyroscope().initWithConfiguration(with: config as? DTUGyroscopeConfiguration)
+        case .Magnetometer:
+            return DTUMagnetometer().initWithConfiguration(with: (config as? DTUMagnetometerConfiguration?)!)
+>>>>>>> Stashed changes
         case .Battery:
             return DTUBattery().initwithConfiguration()
         default:
@@ -74,7 +86,6 @@ public class DTUSensorManager {
         getSensor(sensorType: sensor).sensorConfiguration = config
     }
 
-    
     
     //MARK: Continious Sensing
     

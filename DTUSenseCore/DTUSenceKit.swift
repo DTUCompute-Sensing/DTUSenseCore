@@ -12,6 +12,11 @@ import Foundation
 public enum SensorType:String {
     case Battery
     case Accelerometer
+<<<<<<< Updated upstream
+=======
+    case Gyroscope
+    case Magnetometer
+>>>>>>> Stashed changes
 }
 
 public class DTUSenceKit {

@@ -49,11 +49,12 @@ public class DTUAccelerometer : DTUSensor {
         super.startSensing()
         
         if sharedMotionManager.isAccelerometerAvailable {
-            sharedMotionManager.startAccelerometerUpdates(to: (OperationQueue.current!), withHandler: { (data : CMAccelerometerData?, error : Error?) in
+            sharedMotionManager.startAccelerometerUpdates(to: (OperationQueue.current!), withHandler: { (accData : CMAccelerometerData?, error : Error?) in
                 if (error != nil) {
                     print("startAccelerometerUpdates error: \(error?.localizedDescription)")
                 }else{
-                    let data : DTUAccelerometerData = DTUAccelerometerData().initWithAccelerometerData(accelerometerData: data!)
+                    let data : DTUAccelerometerData = DTUAccelerometerData().initWithAccelerometerData(accelerometerData: accData!)
+                    data.timeStamp = Date(timeIntervalSinceNow: accData!.timestamp) as NSDate!
                     self.submitSensorData(data: data)
                 }
             })

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A0DFD111D8FCDC8001D2FAE /* DTUSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */; };
+		2A1DDC751DA3E49600EB4371 /* DTUMagnetometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1DDC741DA3E49600EB4371 /* DTUMagnetometer.swift */; };
+		2A1DDC771DA3E4BA00EB4371 /* DTUMagnetometerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1DDC761DA3E4BA00EB4371 /* DTUMagnetometerData.swift */; };
+		2A1DDC791DA3E4D900EB4371 /* DTUMagnetometerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1DDC781DA3E4D900EB4371 /* DTUMagnetometerConfiguration.swift */; };
 		2A817ECD1D8BD8690040B21D /* DTUSenseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A817EC31D8BD8690040B21D /* DTUSenseCore.framework */; };
 		2A817ED21D8BD8690040B21D /* DTUSenseCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A817ED11D8BD8690040B21D /* DTUSenseCoreTests.swift */; };
 		2A817ED41D8BD8690040B21D /* DTUSenseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A817EC61D8BD8690040B21D /* DTUSenseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		2A0DFD101D8FCDC8001D2FAE /* DTUSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUSensor.swift; sourceTree = "<group>"; };
+		2A1DDC741DA3E49600EB4371 /* DTUMagnetometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUMagnetometer.swift; path = Sensors/DTUMagnetometer.swift; sourceTree = "<group>"; };
+		2A1DDC761DA3E4BA00EB4371 /* DTUMagnetometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUMagnetometerData.swift; path = Sensors/DTUMagnetometerData.swift; sourceTree = "<group>"; };
+		2A1DDC781DA3E4D900EB4371 /* DTUMagnetometerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DTUMagnetometerConfiguration.swift; path = Configurations/DTUMagnetometerConfiguration.swift; sourceTree = "<group>"; };
 		2A817EC31D8BD8690040B21D /* DTUSenseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTUSenseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A817EC61D8BD8690040B21D /* DTUSenseCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTUSenseCore.h; sourceTree = "<group>"; };
 		2A817EC71D8BD8690040B21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1DDC731DA3E3E300EB4371 /* Magnetometer */ = {
+			isa = PBXGroup;
+			children = (
+				2A1DDC741DA3E49600EB4371 /* DTUMagnetometer.swift */,
+				2A1DDC761DA3E4BA00EB4371 /* DTUMagnetometerData.swift */,
+				2A1DDC781DA3E4D900EB4371 /* DTUMagnetometerConfiguration.swift */,
+			);
+			name = Magnetometer;
+			sourceTree = "<group>";
+		};
 		2A817EB91D8BD8690040B21D = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +155,7 @@
 		2A817F441D8C01B70040B21D /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				2A1DDC731DA3E3E300EB4371 /* Magnetometer */,
 				2A855AEF1D91530300A522B6 /* Battery */,
 				2A855AEE1D9152F900A522B6 /* Gyroscope */,
 				2A855AE71D91360F00A522B6 /* Accelerometer */,
@@ -311,11 +328,14 @@
 				2A817F4D1D8C22120040B21D /* DTUAccelerometerData.swift in Sources */,
 				2A817F3C1D8BE7630040B21D /* DTUSenceKit.swift in Sources */,
 				2A817F4F1D8C23770040B21D /* DTUSensorData.swift in Sources */,
+				2A1DDC771DA3E4BA00EB4371 /* DTUMagnetometerData.swift in Sources */,
+				2A1DDC751DA3E49600EB4371 /* DTUMagnetometer.swift in Sources */,
 				2A817F471D8C02770040B21D /* DTUAccelerometer.swift in Sources */,
 				2AB990E21D8FE5EC0000F991 /* DTUSensorDataHandler.swift in Sources */,
 				2A817F431D8BF4430040B21D /* DTUBattery.swift in Sources */,
 				2A855AE41D912F2500A522B6 /* DTUSensorConfiguration.swift in Sources */,
 				2A855AF31D91579100A522B6 /* DTUGyroscopeConfiguration.swift in Sources */,
+				2A1DDC791DA3E4D900EB4371 /* DTUMagnetometerConfiguration.swift in Sources */,
 				2A855AF11D91533800A522B6 /* DTUGyroscopeData.swift in Sources */,
 				2A817F411D8BEF380040B21D /* DTUSensorManager.swift in Sources */,
 				2A855AE91D91366600A522B6 /* DTUAccelerometerConfiguration.swift in Sources */,
@@ -455,6 +475,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DTUSenseCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtu.dk.DTUSenseCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,6 +497,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DTUSenseCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtu.dk.DTUSenseCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";

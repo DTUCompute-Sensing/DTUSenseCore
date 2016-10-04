@@ -12,7 +12,7 @@ public class DTUSensorData: NSObject {
 
     
     var sensorType : SensorType! = nil
-    
+    public var timeStamp : NSDate!
     
     func initWithSensorType(sensorType : SensorType) -> DTUSensorData {
         self.sensorType = sensorType

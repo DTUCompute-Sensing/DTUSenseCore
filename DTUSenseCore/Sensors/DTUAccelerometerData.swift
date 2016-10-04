@@ -16,5 +16,6 @@ public class DTUAccelerometerData: DTUSensorData {
     public func initWithAccelerometerData(accelerometerData : CMAccelerometerData) -> DTUAccelerometerData {
             self.acceleration = accelerometerData.acceleration
             return self
-        }
+    }
+    
 }

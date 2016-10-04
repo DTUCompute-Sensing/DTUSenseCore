@@ -13,6 +13,7 @@ public enum SensorType:String {
     case Battery
     case Accelerometer
     case Gyroscope
+    case Magnetometer
 }
 
 public class DTUSenceKit {

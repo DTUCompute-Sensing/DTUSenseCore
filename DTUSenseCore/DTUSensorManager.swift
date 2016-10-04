@@ -11,8 +11,6 @@ import Foundation
 
 public class DTUSensorManager {
     
-    
-    
     var sensors :  [String: DTUSensor] = [:]
     
     //MARK: - Sensor Availability
@@ -25,6 +23,8 @@ public class DTUSensorManager {
             return DTUBattery().isSensorAvailable()
         case .Gyroscope:
             return DTUGyroscope().isSensorAvailable()
+        case .Magnetometer:
+            return DTUMagnetometer().isSensorAvailable()
         default:
             print("Unknow Sensor. Sensor Type = \(sensor) ")
             return false
@@ -47,6 +47,8 @@ public class DTUSensorManager {
             return DTUAccelerometer().initWithConfiguration(with: config as? DTUAccelerometerConfiguration)
         case .Gyroscope:
             return DTUGyroscope().initWithConfiguration(with: config as? DTUGyroscopeConfiguration)
+        case .Magnetometer:
+            return DTUMagnetometer().initWithConfiguration(with: (config as? DTUMagnetometerConfiguration?)!)
         case .Battery:
             return DTUBattery().initwithConfiguration()
         default:
@@ -79,7 +81,6 @@ public class DTUSensorManager {
         getSensor(sensorType: sensor).sensorConfiguration = config
     }
 
-    
     
     //MARK: Continious Sensing
     
